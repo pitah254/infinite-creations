@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">Adrenaline</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Projects</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </header>
+    <section class="home">
+        <video class="video-slide active" src="FINbackground.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="backvideo2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="FINbackground.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="backvideo2.mp4" autoplay muted loop></video>
+        <div class="content active">
+            <h1>Zipline. <br><span>Enthusiasts</span></h1>
+            <p>Introducing the pinnacle of adventure in East Africa! As the leading pioneers in zipline technology, we're thrilled to unveil our latest creation: the most advanced zipline experience ever seen. With unrivaled innovation and a commitment to safety, our zipline promises to redefine the thrill of flight. Dare to experience the future of ziplining with us</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Skyline. <br><span>Experts</span></h1>
+            <p>Experience the thrill of a lifetime with the Skyline Experts! Renowned for our expertise in high-rope adventures, we offer unparalleled excitement that takes your breath away. Journey through our meticulously designed courses and conquer new heights with the guidance of our seasoned team</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Crafting Dream.<br><span>Stays</span></h1>
+            <p>Transforming visions into luxurious escapes, our expert team specializes in crafting exceptional vacation rentals. With meticulous attention to detail and innovative design, we bring your dream getaway to life. Elevate your hospitality business with our unmatched expertise in vacation rental construction.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Bungee Jumping. <br><span>Engineering</span></h1>
+            <p>Delivering the ultimate thrill-seeker's paradise, We spearhead the construction of state-of-the-art bungee jump facilities. With precision engineering and dedication to safety, We ensure every jump is an exhilarating yet secure experience. Trust us to build the adrenaline-fueled destinations that leave a mark on adventure enthusiasts worldwide</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+    <script type = "text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click",()=>{
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+        var sliderNav = function(manual){
+            btns.forEach((btn) => {
+                btn.classList.remove("active");
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+
+            contents.forEach((content) => {
+                content.classList.remove("active");
+            });
+
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+        btns.forEach((btn,i)=> {
+            btn.addEventListener("click",()=>{
+                sliderNav(i);
+            });
+        })
+    </script>
+</body>
+</html>
