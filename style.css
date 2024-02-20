@@ -175,9 +175,6 @@ section{
     position: relative;
     width: 100%;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     background: #e6f9ff;
     overflow: hidden;
 }
@@ -233,7 +230,7 @@ img{
         width: 95%;
         flex-direction: column;
         margin: 0px;
-        padding: 0px 40px;
+        /* padding: 0px 40px; */
     }
     .hero-Content{
         width: 100%;
