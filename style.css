@@ -96,15 +96,6 @@ section{
 .home .content p{
     margin-bottom: 16px;
 }
-.home .content a{
-    background: #fff;
-    padding: 15px 35px;
-    color: #1680AC;
-    font-size: 1.1em;
-    font-weight: 400;
-    text-decoration: none;
-    border-radius: 2px;
-}
 .home .media-icons{
     z-index: 888;
     position: absolute;
@@ -278,12 +269,8 @@ img{
         font-size: 0.7em;
     }
     .home .content p{
-        margin-bottom: 65px;
+        margin-bottom: 5px;
         font-weight:lighter;
-    }
-    home .content a{
-        padding: 10px 28px;
-        font-size: 0.9em;
     }
     .menu-btn{
         width: 18px;
